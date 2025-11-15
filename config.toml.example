@@ -1,0 +1,157 @@
+# Repliers Beta - Example Configuration
+# Copy this file to config.toml and adjust the values for your use case
+# All values in this file are examples and should be replaced with real data
+
+# Search Listings Example Configuration
+[search]
+# Example 1 - Toronto condos
+[search.example1]
+city = "Toronto"
+status = ["Active"]
+min_price = 500000.0
+max_price = 1000000.0
+bedrooms = 3
+property_type = ["Condo"]
+page = 1
+results_per_page = 50
+
+# Example 2 - Vancouver condos
+[search.example2]
+city = "Vancouver"
+status = ["Active"]
+min_price = 800000.0
+max_price = 1500000.0
+bedrooms = 2
+property_type = ["Condo"]
+page = 1
+results_per_page = 20
+
+# AI Search Configuration
+[ai_search]
+prompt = "find me 3 bedroom condos in Toronto under $800k"
+
+# Single Listing Configuration
+[listing]
+mls_number = "RTC2788401"
+
+# Similar Listings Configuration
+[similar]
+mls_number = "RTC2788401"
+radius = 5.0  # kilometers
+list_price_range = 50000.0  # +/- price range
+
+# Address History Configuration
+[address_history]
+street_number = "2612"
+street_name = "N Mt. Juliet Road"
+city = "Mt. Juliet"
+state = "TN"
+# Optional: zip = "37122"
+
+# Deleted Listings Configuration
+[deleted]
+min_updated_on = "2025-01-01"
+max_updated_on = "2025-10-31"
+page = 1
+results_per_page = 100
+
+# Export Listings Configuration
+[export]
+city = "Toronto"
+status = ["Active"]
+results_per_page = 20
+output_file = "toronto_listings.json"
+
+# Discovery Example Configuration
+[discovery]
+# Cities to test in discovery
+test_cities = [
+    "Toronto",
+    "Vancouver",
+    "Calgary",
+    "Montreal",
+    "Ottawa",
+    "Edmonton",
+    "Mississauga",
+    "Winnipeg",
+    "Quebec City",
+    "Hamilton"
+]
+
+# Property types to analyze
+property_types = [
+    "Condo",
+    "Detached",
+    "Townhouse",
+    "Semi-Detached",
+    "Apartment"
+]
+
+# Listing statuses to analyze
+statuses = [
+    "Active",
+    "Sold",
+    "Pending",
+    "Expired",
+    "Cancelled"
+]
+
+# Price ranges for analysis (label, min, max)
+# Use null for no min/max limit
+[[discovery.price_ranges]]
+label = "Under $300k"
+min_price = 0.0
+max_price = 300000.0
+
+[[discovery.price_ranges]]
+label = "$300k-$500k"
+min_price = 300000.0
+max_price = 500000.0
+
+[[discovery.price_ranges]]
+label = "$500k-$750k"
+min_price = 500000.0
+max_price = 750000.0
+
+[[discovery.price_ranges]]
+label = "$750k-$1M"
+min_price = 750000.0
+max_price = 1000000.0
+
+[[discovery.price_ranges]]
+label = "$1M-$2M"
+min_price = 1000000.0
+max_price = 2000000.0
+
+[[discovery.price_ranges]]
+label = "Over $2M"
+min_price = 2000000.0
+max_price = 200000000.0
+
+# Comprehensive Demo Configuration
+# This demo showcases all 4 working endpoints in a single run
+[demo]
+# Search criteria for finding listings
+city = "Toronto"
+status = ["Active"]
+min_price = 500000.0
+max_price = 1000000.0
+bedrooms = 2
+property_type = ["Condo"]
+results_per_page = 10
+
+# MLS number to fetch detailed info and find similar listings
+# This should be a valid MLS number that returns data with your API key
+mls_number = "RTC2788401"
+
+# Similar listings search parameters
+similar_radius = 5.0  # kilometers
+similar_price_range = 50000.0  # +/- price range
+
+# Deleted listings date range
+deleted_min_date = "2025-01-01"
+deleted_max_date = "2025-10-31"
+deleted_results_per_page = 20
+
+# Output file for JSON export
+output_file = "api_demo_report.json"

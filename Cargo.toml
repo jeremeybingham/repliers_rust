@@ -1,0 +1,64 @@
+[package]
+name = "repliers_beta"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <you@example.com>"]
+description = "Demonstration/proof-of-concept Rust client for the Repliers Real Estate API - educational purposes only"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/jeremeybingham/repliers_beta"
+keywords = ["repliers", "real-estate", "mls", "api", "demo"]
+categories = ["api-bindings", "web-programming::http-client"]
+
+[dependencies]
+reqwest = { version = "0.12", features = ["json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1", features = ["full"] }
+thiserror = "1.0"
+dotenvy = "0.15"
+chrono = { version = "0.4", features = ["serde"] }
+toml = "0.8"
+
+[dev-dependencies]
+mockito = "1.2"
+
+[lib]
+name = "repliers_beta"
+path = "src/lib.rs"
+
+# Example binaries
+[[example]]
+name = "search_listings"
+path = "examples/search_listings.rs"
+
+[[example]]
+name = "ai_search"
+path = "examples/ai_search.rs"
+
+[[example]]
+name = "get_listing"
+path = "examples/get_listing.rs"
+
+[[example]]
+name = "similar_listings"
+path = "examples/similar_listings.rs"
+
+[[example]]
+name = "address_history"
+path = "examples/address_history.rs"
+
+[[example]]
+name = "deleted_listings"
+path = "examples/deleted_listings.rs"
+
+[[example]]
+name = "discovery"
+path = "examples/discovery.rs"
+
+[[example]]
+name = "export_listings"
+path = "examples/export_listings.rs"
+
+[[example]]
+name = "comprehensive_demo"
+path = "examples/comprehensive_demo.rs"
