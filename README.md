@@ -22,7 +22,7 @@ See below for more detailed documentation, but for the simplest way to get start
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # 2. Clone this repo and enter it
-git clone https://github.com/  && cd rust-api
+git clone https://github.com/jeremeybingham/repliers_rust.git  && cd repliers_rust
 
 # 3. Copy environment template to .env
 cp .env.example .env
