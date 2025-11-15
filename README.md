@@ -1,6 +1,6 @@
 # Repliers API Client for Rust
 
-A type-safe, asynchronous Rust client library for the [Repliers Real Estate API](https://docs.repliers.io/).
+A simple asynchronous Rust client library for the [Repliers Real Estate API](https://docs.repliers.io/).
 
 ## Important Notice
 
