@@ -50,10 +50,6 @@ The following endpoints work with test API keys:
 - Get Similar Listings (GET /listings/{mlsNumber}/similar) ✓
 - Get Deleted Listings (GET /listings/deleted) ✓
 
-## Project Status
-
-6 API endpoints implemented with working examples (4 fully testable with demo keys, 2 not working)
-
 ## Overview
 
 This demonstration library provides a Rust interface to the Repliers API, which offers access to MLS (Multiple Listing Service) data including property listings, AI-powered search, historical data, and more.
