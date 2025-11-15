@@ -197,7 +197,6 @@ The `comprehensive_demo` example is a special showcase that demonstrates all 4 w
 - Rich, formatted console output with section headers and summaries
 - Complete JSON report export with all results and metadata
 - Execution time tracking and statistics
-- Perfect for API demonstrations and testing
 
 **Configuration:**
 The demo uses the `[demo]` section in `config.toml`. All parameters are customizable:
