@@ -60,7 +60,6 @@ This demonstration library provides a Rust interface to the Repliers API, which 
 
 ### Key Features (Demonstration Purposes)
 
-- **Type-safe API** with strongly-typed requests and responses
 - **Async/await** support using Tokio
 - **Listing endpoint coverage** for all 6 major Repliers API Listing endpoints
 - **Error handling** with custom error types using `thiserror`
